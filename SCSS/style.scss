@@ -74,7 +74,6 @@ main {
   place-items: center;
   margin-top: 10em;
   margin-bottom: 10em;
-  // height: 100vh;
 }
 
 .intro .rounded-btn {
@@ -134,11 +133,9 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   gap: 2em;
-  justify-content: center; /* horizontally center the grid */
-  align-content: center; /* vertically center the grid */
+  justify-content: center;
+  align-content: center;
   margin-top: 2em;
-  // max-width: 100%;
-  // margin: 0 auto;
 }
 
 .price-card {
@@ -189,7 +186,6 @@ main {
 .moving-images {
   display: flex;
   gap: 1rem;
-  // align-items: center;
   justify-content: center;
   div {
     width: clamp(150px, 5rem + 5vw, 500px);
@@ -220,7 +216,6 @@ main {
 .need-hand {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   justify-content: center;
   margin-bottom: 5em;
 }

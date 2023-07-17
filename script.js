@@ -58,7 +58,6 @@ gsap.to('.left-cloud', {
     scrub: true,
     start: 'top 80%',
     end: "top 20%",
-    markers: true
   }
 })
 gsap.to('.right-cloud', {

@@ -198,8 +198,8 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   gap: 2em;
-  justify-content: center; /* horizontally center the grid */
-  align-content: center; /* vertically center the grid */
+  justify-content: center;
+  align-content: center;
   margin-top: 2em;
 }
 
