@@ -1,0 +1,333 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* main colors */
+body {
+  position: relative;
+  background-color: #171717;
+  color: #dbd7cb;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+}
+
+img {
+  min-inline-size: 100%;
+}
+
+.noise {
+  background-image: url("/images/noise-effect.gif");
+  background-size: auto;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  opacity: 0.025;
+}
+
+header {
+  margin-bottom: 5em;
+}
+
+nav {
+  margin: 0 auto;
+  width: 95%;
+  border-bottom: 1px solid #5e5d5c;
+  font-weight: 500;
+  padding: 0 1.5em 1em;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  list-style: none;
+}
+
+a > img {
+  width: 2.5em;
+}
+
+a {
+  all: unset;
+}
+
+main {
+  margin: 0 1em;
+  margin-top: 5%;
+}
+
+.intro {
+  text-align: center;
+  padding: 1em;
+  display: grid;
+  place-items: center;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.intro .rounded-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  border: 1px solid #5e5d5c;
+  margin-bottom: 2em;
+}
+
+.intro__header {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.intro__header h1 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1rem + 2vw, 7rem);
+}
+.intro__header p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 2rem;
+}
+
+.introChars {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.pricingChars {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.intro .get-free-quote {
+  font-weight: 700;
+  margin-top: 3em;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 17em;
+}
+.pricing .pricing-header h1 {
+  font-size: clamp(4rem, 2rem + 5vw, 25em);
+}
+.pricing .pricing-header p {
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+}
+
+.prices-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 2em;
+  justify-content: center; /* horizontally center the grid */
+  align-content: center; /* vertically center the grid */
+  margin-top: 2em;
+}
+
+.price-card {
+  border: 1px solid #5e5d5c;
+  border-radius: 20px;
+  padding: 1.2rem 1rem;
+  height: 330px;
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+.price-card .card__header {
+  font-weight: 500;
+}
+.price-card .card__service {
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1rem + 1vw, 1rem);
+  margin: 1.2em 0;
+}
+
+.card__price p {
+  color: #5e5d5c;
+  font-weight: 500;
+}
+.card__price h2 {
+  font-weight: 800;
+  font-size: clamp(2.5rem, 1rem + 1vw, 3rem);
+}
+
+.card__btn {
+  margin: 0 auto;
+}
+.card__btn button {
+  border: none;
+  border-radius: 10px;
+  color: #dbd7cb;
+  font-weight: 500;
+  width: 100%;
+  padding: 1em;
+  background-color: #302e2e;
+}
+
+.need-hand {
+  margin-top: 40em;
+}
+
+.moving-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.moving-images div {
+  width: clamp(150px, 5rem + 5vw, 500px);
+}
+.moving-images .smile-face {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.left-cloud {
+  transform: translateX(60px);
+}
+
+.right-cloud {
+  transform: translateX(-100px);
+}
+
+.get-started {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+
+.need-hand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.hand__header {
+  font-size: clamp(5rem, 1rem + 10vw, 10rem);
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.handChars {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.hand__btn {
+  margin: 0 auto;
+}
+.hand__btn button {
+  font-size: 3vw;
+  padding: 0.8em 2em;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 1rem;
+  margin: 2em auto;
+  border-top: 1px solid #5e5d5c;
+  padding-top: 1em;
+  width: 95%;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #5e5d5c;
+}
+
+#bg-blue {
+  background-color: #0173fc;
+}
+
+@media (max-width: 966px) {
+  nav {
+    padding: 0;
+  }
+  .case-studies {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

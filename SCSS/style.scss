@@ -1,0 +1,276 @@
+@use "./reset";
+
+/* main colors */
+$main-color: #171717;
+$font-color: #dbd7cb;
+$shift-color: #0173fc;
+$light-main: #5e5d5c;
+
+@mixin chars {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+body {
+  position: relative;
+  background-color: $main-color;
+  color: $font-color;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+}
+
+img {
+  min-inline-size: 100%;
+}
+
+.noise {
+  background-image: url("/images/noise-effect.gif");
+  background-size: auto;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  opacity: 0.025;
+}
+
+header {
+  margin-bottom: 5em;
+}
+
+nav {
+  margin: 0 auto;
+  width: 95%;
+  border-bottom: 1px solid $light-main;
+  font-weight: 500;
+  padding: 0 1.5em 1em;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      list-style: none;
+    }
+  }
+}
+a > img {
+  width: 2.5em;
+}
+
+a {
+  all: unset;
+}
+
+main {
+  margin: 0 1em;
+  margin-top: 5%;
+}
+.intro {
+  text-align: center;
+  padding: 1em;
+  display: grid;
+  place-items: center;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  // height: 100vh;
+}
+
+.intro .rounded-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  border: 1px solid $light-main;
+  margin-bottom: 2em;
+}
+
+.intro__header {
+  margin: 0 auto;
+  max-width: 700px;
+  h1 {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 1rem + 2vw, 7rem);
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 2rem;
+  }
+}
+
+.introChars {
+    @include chars;
+}
+
+.pricingChars{
+    @include chars;
+}
+
+.intro .get-free-quote {
+  font-weight: 700;
+  margin-top: 3em;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 17em;
+  .pricing-header {
+    h1 {
+      font-size: clamp(4rem, 2rem + 5vw, 25em);
+    }
+    p {
+      font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+    }
+  }
+}
+
+.prices-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 2em;
+  justify-content: center; /* horizontally center the grid */
+  align-content: center; /* vertically center the grid */
+  margin-top: 2em;
+  // max-width: 100%;
+  // margin: 0 auto;
+}
+
+.price-card {
+  border: 1px solid $light-main;
+  border-radius: 20px;
+  padding: 1.2rem 1rem;
+  height: 330px;
+  transform: scale(0.85);
+  opacity: 0.5;
+  .card__header {
+    font-weight: 500;
+  }
+  .card__service {
+    font-weight: 500;
+    font-size: clamp(1.1rem, 1rem + 1vw, 1rem);
+    margin: 1.2em 0;
+  }
+}
+
+.card__price {
+  p {
+    color: $light-main;
+    font-weight: 500;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: clamp(2.5rem, 1rem + 1vw, 3rem);
+  }
+}
+
+.card__btn {
+  margin: 0 auto;
+  button {
+    border: none;
+    border-radius: 10px;
+    color: $font-color;
+    font-weight: 500;
+    width: 100%;
+    padding: 1em;
+    background-color: #302e2e;
+  }
+}
+
+.need-hand {
+  margin-top: 40em;
+}
+
+.moving-images {
+  display: flex;
+  gap: 1rem;
+  // align-items: center;
+  justify-content: center;
+  div {
+    width: clamp(150px, 5rem + 5vw, 500px);
+  }
+  .smile-face {
+    width: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.left-cloud{
+    transform: translateX(60px);
+}
+.right-cloud{
+    transform: translateX(-100px);
+}
+
+
+.get-started {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+
+.need-hand {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.hand__header {
+  font-size: clamp(5rem, 1rem + 10vw, 10rem);
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.handChars{
+    @include chars();
+}
+
+.hand__btn {
+  margin: 0 auto;
+  button {
+    font-size: 3vw;
+    padding: 0.8em 2em;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 1rem;
+  margin: 2em auto;
+  border-top: 1px solid $light-main;
+  padding-top: 1em;
+  width: 95%;
+}
+
+// utilities
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: $light-main;
+}
+
+#bg-blue {
+  background-color: $shift-color;
+}
+
+@media (max-width: 966px) {
+  nav {
+    padding: 0;
+  }
+  .case-studies {
+    display: none;
+  }
+}
